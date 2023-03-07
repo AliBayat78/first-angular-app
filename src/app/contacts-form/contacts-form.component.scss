@@ -18,6 +18,10 @@ form {
       margin: 1rem 0;
     }
 
+    .form-control.ng-touched.ng-invalid {
+      border: 2px solid red;
+    }
+
     .error-validation {
       background: {
         color: rgb(228, 140, 140);
