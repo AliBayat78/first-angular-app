@@ -1,5 +1,12 @@
 <div class="container">
   <h1>Angular Forms</h1>
 
-  <contacts-form></contacts-form>
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Favorite food</mat-label>
+      <input matInput placeholder="Todo" name="Todo" [(ngModel)]="newTodo" />
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" (click)="addTodo()">Add</button>
+  </form>
 </div>
