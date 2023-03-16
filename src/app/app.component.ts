@@ -33,6 +33,12 @@ export class AppComponent {
     }
   }
 
+  removeTodo(todo: Todo) {
+    const updatedTodos = this.todos.filter((item) => item !== todo);
+    this.todos = updatedTodos;
+    this.dataSource = new MatTableDataSource<Todo>(this.todos);
+  }
+
   toggleCompleted() {
     const index = this.todos.findIndex((i) => i);
     !this.todos[index].isCompleted;
