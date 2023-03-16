@@ -16,7 +16,7 @@
       <button mat-raised-button color="primary" (click)="addTodo()">Add</button>
     </form>
     <div class="table-group">
-      <table mat-table [dataSource]="dataSource">
+      <table class="table" mat-table [dataSource]="dataSource">
         <ng-container matColumnDef="name">
           <th mat-header-cell *matHeaderCellDef>Name</th>
 
@@ -24,12 +24,13 @@
             mat-cell
             *matCellDef="let todo"
             [ngClass]="{ 'not-Completed': !todo.isCompleted }"
-            class="name-container"
           >
-            {{ todo.name }}
-            <button mat-icon-button (click)="removeTodo(todo)">
-              <mat-icon>delete</mat-icon>
-            </button>
+            <div class="name-container">
+              <button mat-icon-button (click)="removeTodo(todo)">
+                <mat-icon>delete</mat-icon>
+              </button>
+              {{ todo.name }}
+            </div>
           </td>
         </ng-container>
 
