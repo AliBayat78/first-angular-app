@@ -37,13 +37,11 @@
     .table-group {
       width: 500px;
 
-      .table {
-        .name-container {
-          display: flex;
-          flex-direction: row;
-          justify-content: flex-start;
-          align-items: center;
-        }
+      .checkbox-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
       }
     }
   }
